@@ -1,0 +1,894 @@
+
+/* body::-webkit-scrollbar{
+  display: none;
+
+
+} */
+
+html {
+
+overflow-x: hidden;
+}
+:root {
+--coinbase-color: rgba(0, 82, 255, 1);
+--pink: #F83292;
+--white-1: #fff;
+--gradient: linear-gradient(90deg, var(--purple),
+var(--pink));
+--box-shadow: rgba(0, 0, 0, .1);
+}
+*{
+font-family: CoinbaseDisplay,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+Oxygen,
+Ubuntu,
+Cantarell,
+"Fira Sans",
+"Droid Sans",
+"Helvetica Neue",
+sans-serif;
+box-sizing: border-box;
+}
+*::selection{
+background-color: var(--coinbase-color);
+color: white;
+}
+.container{
+max-width: 1140px;
+margin: 0 auto;
+}
+nav{
+position: sticky;
+left: 0;
+right: 0;
+top: 0;
+display: flex;
+flex-direction:row;
+justify-content: space-between;
+align-items: center;
+border-bottom: 2px solid rgb(207, 203, 203);
+padding: 1rem;
+background-color: #ffff;
+
+
+}
+.signin-up-section-input{
+display: none;
+}
+nav label{
+visibility: hidden;
+opacity: 0;
+}
+
+
+.coinbase-logo,
+.nav-section,
+.signin-up-section{
+display: flex;
+flex-direction: row;
+justify-content:space-between ;
+gap: 1rem;
+}
+.coinbase-logo li,
+.nav-section li,
+.signin-up-section li{
+font-size: 1.3rem;
+font-weight:700;
+
+}
+
+.nav-section li{
+width: 120px;
+height:100%;
+padding:  1rem ;
+text-align: center;
+}
+
+.nav-section li:hover{
+background-color:rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+}
+
+.coinbase-logo h1{
+font-size: 2.7rem;
+font-weight: 900;
+color: var(--coinbase-color);
+}
+
+.get-started{
+
+background-color: var(--coinbase-color);
+padding: .7rem;
+border-radius: 30px;
+font-weight:900;
+color: white;
+
+}
+.signin-up-section{
+align-items: center;
+}
+
+
+
+/* jumpstart */
+
+.jumpstart-main{
+margin-top: 4rem;
+}
+.jumpstart-wrapper{
+display: flex;
+flex-direction:row;
+flex-wrap: wrap;
+justify-content:center ;
+
+}
+
+.jumpstart-arrow{
+margin: 4rem auto;
+/* padding: 2rem; */
+}
+
+
+.jumpstart-image img{
+max-width:500px; 
+}
+.jumpstart-arrow{
+display: flex;
+flex-direction:row;
+gap: 1.2rem;
+color: rgba(0, 82,255,1);
+text-align: center;
+font-size: 1.4rem;
+}
+
+.jumpstart h1{
+
+width: 350px;
+color: black;
+line-height: 4.2rem;
+font-size: 62px;
+font-weight: 500;
+margin-bottom: 2.2rem;
+}
+.jumpstart p{
+font-size: 1.2rem;
+font-weight: 550;
+margin-top: .8rem;
+width: 400px;
+color: gray;
+}
+.input-section{
+display: flex;
+gap: .6rem;
+font-weight: 700;
+margin: .8rem 0;
+
+
+
+}
+.input-section input{
+border-radius: 6px;
+padding: 1rem;
+
+}
+.input-section input:focus{
+border-color: blue;
+}
+.input-section h2{
+padding: .6rem;
+border: 4px gray;
+padding: 1rem;
+
+}
+.input-section h2{
+background: rgba(0, 82, 255, 1);
+color: rgb(223, 217, 217);
+border-radius: 6px;
+}
+.input-section h2:hover{
+background-color: green;
+transition: all .3s linear;
+}
+.input-section input::placeholder{
+padding-left: 1.2rem;
+
+}
+
+/* explore the web3 profiles */
+.explore{
+background-color: rgb(11, 11, 11);
+margin-top: 4rem;
+}
+.explore-wrapper{
+display: flex;
+flex-direction:row;
+justify-content:center ;
+text-align: center;
+align-items: center;
+gap: 1rem;
+color: #ffff;
+padding: 2rem;
+
+}
+.explore-description{
+display: flex;
+flex-direction: column;
+gap: .9rem;
+
+}
+
+.explore-description h1{
+font-size: 2.7rem;
+}
+.explore-description h4{
+font-size: 1.5rem;
+}
+.explore-description h6{
+background-color:  rgba(0, 82, 255, 1);
+max-width: 500px;
+padding: 1rem;
+border-radius:8px;
+font-size: 1.5rem;
+font-weight:500;
+}
+
+/* crypto collection */
+.crypto-collection{
+margin-top: 5rem;
+
+}
+
+/* trade collection table */
+.crypto-wrapper{
+
+margin: 0 2rem;
+align-items: center;
+
+
+}
+
+
+th,tr{
+border: 2px solid rgb(188, 188, 188);
+align-items: center;
+font-weight: 700;
+color: gray;
+padding: 2rem;
+
+width: 100%;
+
+}
+th:hover,td:hover{
+background-color: rgba(231, 231, 231, 0.674);
+}
+.crypto-id{
+font-size: 1.8rem;
+font-weight: 700;
+
+text-align: center;
+}
+.trade-name{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+gap:.6rem;
+margin: .5rem 0;
+width: 300px;
+}
+.trade-name img{
+width: 40px;
+
+
+}
+.trade-name h1{
+font-size: 1.5rem;
+font-weight: 500;
+
+}
+.trade-name h3{
+font-weight:700;
+color: gray;
+align-items: center;
+
+
+}
+
+.trade-btn{
+background: green;
+color: white;
+font-weight: 700;
+font-size: 1.2rem;
+padding: .8rem;
+border-radius: 8px;
+text-transform: capitalize;
+text-align: center;
+margin:.6rem;
+}
+.trade-price{
+font-size: 1.5rem;
+text-align: center;
+}
+.trade-change{
+font-size: 1.5rem;
+font-weight: 800;
+text-align: center;
+}
+.green{
+color: green;
+}
+.red{
+color: red;
+}
+
+/* crypto small table */
+.crypto-small-section{
+margin: 0 2rem;
+margin-top: 5rem;
+display: none;
+}
+.crypto-small{
+
+display: flex;
+flex-direction:row;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 1rem;
+border: 1px solid rgb(197, 195, 195);
+box-shadow: .1rem .1rem .1rem .1rem rgb(217, 215, 215) ;
+}
+
+/* create your portfolio in here */
+/* profolio main image */
+
+.portfolio-creation {
+margin: 6rem 3rem;
+}
+.protfolio-wrapper {
+display: flex;
+flex-direction: row;
+border: 2px solid rgb(248, 248, 248);
+box-shadow: .1rem 0.3rem .2rem rgb(220, 220, 220);
+align-items: center;
+border-radius: 12px;
+
+padding: .8rem;
+gap: 3rem;
+
+}
+
+.protfolio-main-img img {
+display: flex;
+max-width: 500px;
+margin: 0 auto;
+align-items: center;
+
+}
+
+
+.proflio-title h1,
+.trusted-title h1{
+font-size: 2.5rem;
+text-align: center;
+font-weight: 700;
+margin: 1rem;
+
+}
+.proflio-title h5,
+.trusted-title h5{
+font-size: 1.5rem;
+color: gray;
+margin: 1rem 1.6rem;
+text-align: center;
+}
+.protfolio-box{
+display: flex;
+flex-direction:row;
+justify-content: space-between;
+border: 2px solid rgb(225, 221, 221);
+align-items: center;
+font-size: 1.5rem;
+gap: 1.5rem 1rem;
+margin: 1rem 0;
+padding: 1rem;
+box-shadow: .1rem .1rem 0 .1rem rgb(205, 205, 205);
+border-radius: 8px;
+
+}
+.protfolio-box .portfolio-icon{
+color: rgb(255, 0, 0);
+background-color: black;
+box-shadow: .2rem .2rem gray;
+font-size: 2.5rem;
+
+}
+.protfolio-box .protfolio-title-desc h1{
+color: grey;
+font-weight: 500;
+font-size: 1.2rem;
+margin-bottom: .6rem;
+}
+.protfolio-box .protfolio-title-desc h3 {
+color: grey;
+font-weight: 400;
+font-size: 1rem;
+}
+
+
+/* trusted cryptocurrency palform */
+.trusted-platform-wrapper{
+display: flex;
+flex-direction: row;
+
+
+}
+.trusted-box{
+display: flex;
+flex-direction: column;
+margin: 2rem 1rem;
+align-items: center;
+text-align: center;
+gap: 1rem;
+border: 4px solid rgb(230, 230, 230);
+box-shadow: .2rem .2rem rgb(189, 188, 188);
+padding: 4rem;
+
+border-radius: 8px;
+
+
+}
+.trusted-box-icon{
+font-size: 3rem;
+color:green;
+background-color: rgba(128, 128, 128, 0.266);
+padding: .5rem;
+border-radius: 8px;
+}
+.trusted-deatils-title{
+font-size: 2rem;
+
+font-weight: 700;
+color: rgb(0, 0, 0);
+}
+
+.tusted-description h3{
+font-size:1.3rem;
+margin: 1rem 0;
+}
+.trusted-learn-more {
+color: blue;
+margin-top: .5rem;
+}
+
+/* netwoth -coinbase */
+.networth{
+padding: 3rem 0;
+left: 0;
+right: 0;
+}
+.networth-wrapper{ 
+display: flex;
+flex-direction:row;
+justify-content: space-around;
+}
+.volume-trade,
+.supported-country,
+.assets{
+display: flex;
+flex-direction: column;
+gap: .7rem;
+
+}
+.volume-trade h5,
+.supported-country h5,
+.assets h5{
+font-size: 1.3rem;
+font-weight: 700;
+color: rgb(221, 218, 218);
+}
+.volume-trade h3{
+font-size: 2rem;
+font-weight: 800;
+color: rgb(221, 218, 218);
+}
+.supported-country{
+font-size: 1.6rem;
+font-weight: 800;
+color: rgb(221, 218, 218);
+
+}
+.assets {
+font-size: 2.2rem;
+font-weight: 800;
+color: rgb(221, 218, 218);
+}
+.networth{
+background-color: rgba(0, 82, 255, 1); 
+margin: 5rem 0;
+}
+
+/* coinbase support */
+.support-wrapper{
+display: flex;
+flex-direction:row;
+flex-wrap: wrap;
+justify-content: space-around;
+gap: 1rem;
+}
+.supports{
+display: flex;
+flex-direction: column;
+gap: 1rem;
+text-align: center;
+font-size: 1.5rem;
+border: 1px solid gray;
+box-shadow: .2rem .2rem .1rem gray;
+border-radius: 12px;
+width: 300px;
+padding: 2rem;
+text-transform: capitalize;
+}
+.supports:hover{
+background: rgb(190, 190, 190);
+color: #ffff;
+}
+
+.create-account h2{
+color: blue;
+font-size: 2.8rem;
+font-weight: 800;
+}
+.create-account h5,
+.link-bank h5,
+.start-trading h5{
+font-weight: 700;
+}
+.link-bank h2{
+color: red;
+font-size: 2.8rem;
+font-weight: 800;
+
+}
+.start-trading h2{
+color: darkgoldenrod;
+font-size: 2.8rem;
+font-weight: 800;
+}
+
+
+/* note */
+.note{
+margin: 5rem 2rem;
+font-size: 1.2rem;
+}
+
+/* footer */
+.footer{
+background-color: rgba(229, 229, 229, 0.154);
+padding: 2rem;
+}
+.footer-wrapper{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+flex-wrap: wrap;
+margin: 0 auto;
+color: gray;
+font-size: 1.5rem;
+
+
+}
+.footer-section-title{
+font-size: 1.5rem;
+font-weight: 700;
+margin-top: 1rem;
+}
+.footer-first-section{
+display: flex;
+flex-direction: column;
+gap:1.2rem;
+}
+.language-select select{
+width: 250px;
+height: 35px;
+font-weight: 400;
+border:1px solid gray;
+border-radius: 8px;
+
+}
+.coinbase-copyright h2{
+font-size: 1.6rem;
+color: gray;
+}
+.socials{
+display: flex;
+flex-direction:row;
+list-style:disc;
+gap: 1.5rem;
+}
+
+
+
+
+
+/*media quries  */
+
+@media(max-width:1328px){
+nav label{
+visibility: visible;
+opacity: 1;
+font-size: 2.2rem;
+font-weight: 700;
+
+
+}
+
+
+/* hamburger -list open section */
+.nav-section{
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+background:rgba(154, 154, 154, .9);
+padding: 1rem 2rem;
+border-top: 0.1rem solid rgba(0, 0, 0, .1);
+box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+transform-origin: top;
+transform: scaleY(0);
+opacity: 0;
+}
+.nav-section{
+flex-direction:column;
+}
+.nav-section li{
+font-size: 2.5rem;
+text-align:center;
+width: 100%;
+}
+.nav-section li:hover{
+  background-color: gray;
+  color: #ffff;
+  transition: all .3s linear;
+ 
+}
+nav input:checked ~.nav-section{
+transform: scaleY(1);
+opacity: 1;
+}
+
+/* hamburger list open ends here */
+
+.protfolio-wrapper{
+flex-direction:column;
+}
+.trusted-platform-wrapper {
+flex-direction: column;
+}
+
+}
+@media(max-width:846px){
+.crypto-collection{
+display: none;
+}
+.crypto-small-section {
+
+display: block;
+}
+}
+
+@media(max-width:668px){
+
+
+.explore-description h1 {
+font-size: 1.2rem;
+}
+
+.explore-description h4 {
+font-size: .7rem;
+}
+
+.explore-description h6 {
+background-color: rgba(0, 82, 255, 1);
+max-width: 500px;
+padding: 1rem;
+border-radius: 8px;
+font-size: .8rem;
+font-weight: 500;
+}
+
+
+/* netwoth -coinbase */
+
+
+.volume-trade,
+.supported-country,
+.assets {
+display: flex;
+flex-direction: column;
+gap: .7rem;
+
+}
+
+.volume-trade h5,
+.supported-country h5,
+.assets h5 {
+font-size: 1rem;
+font-weight: 700;
+color: rgb(221, 218, 218);
+}
+
+.volume-trade h3 {
+font-size: 1.2rem;
+font-weight: 800;
+color: rgb(221, 218, 218);
+}
+
+.supported-country {
+font-size: 1rem;
+font-weight: 800;
+color: rgb(221, 218, 218);
+
+}
+
+.assets {
+font-size: 1.2rem;
+font-weight: 800;
+color: rgb(221, 218, 218);
+}
+
+.networth {
+background-color: rgba(0, 82, 255, 1);
+margin: 5rem 0;
+}
+
+
+
+}
+
+
+@media(max-width:510px){
+.coinbase-logo li,
+.nav-section li,
+.signin-up-section li{
+font-size: 1rem;
+}
+.coinbase-logo h1{
+font-size: 1.2rem;
+}
+.jumpstart-wrapper{
+padding: 0;
+/* margin: 0 2rem; */
+
+}
+.jumpstart-arrow{
+margin-bottom: 0;
+}
+.jumpstart h1{
+width: 100%;
+font-size: 1rem;
+line-height: 1.6rem;
+margin-top: 0;
+font-weight: 700;
+}
+.jumpstart p{
+font-weight: 400;
+font-size: 1rem;
+color: gray;
+}
+.protfolio-main-img img{
+width: 200px;
+}
+.networth-wrapper{
+flex-direction:column;
+align-items: center;
+justify-content: center;
+
+}
+.volume-trade,
+.supported-country,
+.assets{
+margin-bottom: 2rem;
+font-size: 1rem;
+align-items: center;
+
+
+
+}
+.jumpstart-image img{
+width: 400px;
+}
+
+
+}
+@media(max-width:485px){
+.jumpstart-main{
+margin-top: 1rem;
+}
+.crypto-small{
+flex-direction: column;
+gap: 1rem;
+
+}
+.trade-name{
+border: 4px solid rgb(222, 220, 220);
+padding: .5rem;
+border-radius: 12px;
+}
+.trade-btn{
+width: 80%;
+}
+}
+@media(max-width:425px){
+.jumpstart-arrow{
+flex-direction: column;
+}
+.jumpstart h1{
+text-align: center;
+
+}
+.jumpstart p{
+text-align: center;
+margin-top: 0;
+margin-bottom: 1rem;
+font-size: .7rem;
+max-width: 250px;
+}
+
+.input-section{
+display: none;
+}
+.explore-description h4{
+display: none;
+}
+.trade-name h1{
+display: none;
+}
+.trade-name{
+border: none;
+}
+
+/* first section */
+
+
+.explore-img img{
+width: 50px;
+}
+.jumpstart-image img{
+width: 250px;
+}
+
+/* create account section */
+.trusted-title h1{
+font-size: 1.5rem;
+}
+.protfolio-box{
+flex-direction: column;
+}
+.proflio-title h1{
+font-size: 1.2rem;
+}
+.proflio-title h5{
+font-size: 1rem;
+}
+.protfolio-wrapper{
+background: none;
+box-shadow: none;
+border: none;
+}
+.signin-up-section .get-started{
+display: none;
+}
+.signin-up-section .sign-in{
+background-color: rgba(0, 82, 255, .8);
+padding: .2rem;
+border-radius: 4px;
+color: #ffff;
+
+}
+
+
+}
