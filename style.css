@@ -55,13 +55,8 @@ background-color: #ffff;
 
 
 }
-.signin-up-section-input{
-display: none;
-}
-nav label{
-visibility: hidden;
-opacity: 0;
-}
+
+
 
 
 .coinbase-logo,
@@ -617,50 +612,10 @@ gap: 1.5rem;
 /*media quries  */
 
 @media(max-width:1328px){
-nav label{
-visibility: visible;
-opacity: 1;
-font-size: 2.2rem;
-font-weight: 700;
 
 
-}
 
 
-/* hamburger -list open section */
-.nav-section{
-position: absolute;
-top: 100%;
-left: 0;
-width: 100%;
-background:rgba(154, 154, 154, .9);
-padding: 1rem 2rem;
-border-top: 0.1rem solid rgba(0, 0, 0, .1);
-box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-transform-origin: top;
-transform: scaleY(0);
-opacity: 0;
-}
-.nav-section{
-flex-direction:column;
-}
-.nav-section li{
-font-size: 2.5rem;
-text-align:center;
-width: 100%;
-}
-.nav-section li:hover{
-  background-color: gray;
-  color: #ffff;
-  transition: all .3s linear;
- 
-}
-nav input:checked ~.nav-section{
-transform: scaleY(1);
-opacity: 1;
-}
-
-/* hamburger list open ends here */
 
 .protfolio-wrapper{
 flex-direction:column;
